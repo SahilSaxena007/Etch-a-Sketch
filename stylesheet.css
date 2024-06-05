@@ -41,4 +41,5 @@ html, body {
     border: solid;
     display: flex;
     flex-wrap: wrap;
+    background-color: white;
 }

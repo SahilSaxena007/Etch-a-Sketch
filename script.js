@@ -7,9 +7,16 @@ function place_blocks(size){
         block.classList.add('block-item');
         block.setAttribute('style',`border:1px solid;height:${block_length}%;width:${block_length}%;box-sizing:border-box;`);
         sketch_block.appendChild(block);
+        block.addEventListener('mouseenter', () => {
+            block.style.backgroundColor = 'black';
+        });
     }
 
 }
 
+
+// Creating a function where we enter a div and it becomes coloured and only that element becomes coloured.
+
+
 const sketch_block = document.querySelector('.sketch-block');
-place_blocks(16);
+place_blocks(10);
