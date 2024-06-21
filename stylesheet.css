@@ -44,7 +44,7 @@ button {
     position: relative;
     z-index: 10;
     transition: color 0.4s;
-   }
+    }
    
    button:hover span {
     color: black;
@@ -146,4 +146,10 @@ button {
     border-radius: 50%;
     background: black; /* Initial thumb color */
     cursor: pointer;
+}
+
+.toggle_buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
