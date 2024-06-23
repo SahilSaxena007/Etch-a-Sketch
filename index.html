@@ -1,0 +1,50 @@
+<!-- Etch a sketch game -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="stylesheet.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h2>Options</h2>
+
+            <div class="toggle_buttons">
+                <h3>Toggle Buttons</h3>
+                <button id="color-mode"><span>Toggle Black</span></button>
+                <button id="rainbow-mode"><span>Toggle Rainbow</span></button>
+                <button id="eraser-mode"><span>Eraser</span></button>
+                <button id="shading-mode"><span>Toggle Shading</span></button>
+                
+            </div>
+            
+            
+            
+            
+            <div class="slidecontainer">
+                <h3>Grid Size</h3>
+                <div id="inner-slider">
+                    <input type="range" min="16" max="80" value="16" class="slider" id="myRange">
+                    <p id="sliderValue">16x16</p>
+
+                </div>
+                
+            </div>
+            <button id="clear_button"> <span>Clear</span>
+            </button>
+
+        </div>
+        <div class="right">
+            <h2>Etch-a-Sketch</h2>
+            <!-- Contain stuff such as the actual grid of a particular size -->
+            <div class="sketch-block">
+
+            </div>
+        </div>
+    </div>    
+</body>
+</html>
