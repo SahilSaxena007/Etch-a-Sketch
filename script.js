@@ -48,7 +48,7 @@ function place_blocks(size){
 
 
 function clear(){
-    const blocks = document.querySelectorAll('.block-item');
+    const blocks = document.querySelectorAll('.sketch-block div');
     blocks.forEach((item) => {
         item.style.backgroundColor = 'White';
         item.style.opacity = '1';
@@ -73,9 +73,8 @@ const shading_button = document.querySelector('#shading-mode');
 const slider = document.querySelector('.slider');
 const slider_info = document.querySelector('#sliderValue');
 let isClear  = true;
-let size = slider.value;
 
-place_blocks(size);
+place_blocks(10);
 
 clear_button.addEventListener('click',clear);
 eraser_button.addEventListener('click', () => 
