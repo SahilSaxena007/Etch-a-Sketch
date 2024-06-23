@@ -19,17 +19,11 @@ function place_blocks(size){
 }
 
 function clear(){
-    const blocks = document.querySelectorAll('.block-item');
+    const blocks = document.querySelectorAll('.sketch-block div');
     blocks.forEach((item) => {
         item.style.backgroundColor = 'White';
     })
     isClear = true;
-}
-
-function removeAllChildNodes(parent) {
-    while (parent.firstChild) {
-        parent.removeChild(parent.firstChild);
-    }
 }
 
 
@@ -37,26 +31,13 @@ function removeAllChildNodes(parent) {
 
 const sketch_block = document.querySelector('.sketch-block');
 const clear_button = document.querySelector('#clear_button');
-const slider = document.querySelector('.slider');
-const slider_info = document.querySelector('#sliderValue');
 let isClear  = true;
-let size = slider.value;
 
-place_blocks(size);
+place_blocks(10);
 
 //Events
 clear_button.addEventListener('click',clear);
-slider.addEventListener('input',()=>
-    {
-        if (isClear){
-            size = slider.value;
-            removeAllChildNodes(sketch_block);
-            place_blocks(size);
-            slider_info.textContent = `${size}x${size}`;
-        }
-        
-    }
-)
+
 
 
 
